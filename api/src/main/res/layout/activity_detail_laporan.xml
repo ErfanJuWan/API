@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/medbiru"
+    android:orientation="vertical"
+    tools:context=".DetailLaporan">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/arrow_white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:text="Laporan Terbaru"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+
+    <ScrollView
+        android:background="@drawable/bg_aduan"
+        android:paddingTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="25dp"
+                android:layout_gravity="center_horizontal"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:padding="20dp"
+                    android:layout_height="match_parent"
+                    >
+
+                    <TextView
+                        android:id="@+id/nama_pengguna"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Peter"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ID Pengaduan : "
+                        android:layout_below="@+id/nama_pengguna"
+                        android:id="@+id/tx_pengguna"
+                        />
+
+                    <TextView
+                        android:id="@+id/id_pengguna"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0000"
+                        android:layout_below="@+id/nama_pengguna"
+                        android:layout_toRightOf="@+id/tx_pengguna"
+                        />
+
+                    <TextView
+                        android:id="@+id/date_laporan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="dd/mm/yy"
+                        android:layout_alignParentRight="true"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/laporan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lorem_ipsum"
+                        android:layout_below="@id/tx_pengguna"
+                        android:layout_marginTop="30dp"
+                        />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/imagep"
+                        android:layout_width="350dp"
+                        android:layout_height="150dp"
+                        android:layout_below="@+id/laporan"
+                        android:layout_marginTop="20dp"
+                        app:cardCornerRadius="25dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/imagemajor" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Status : "
+                        android:layout_below="@+id/imagep"
+                        android:layout_marginTop="15dp"
+                        android:id="@+id/status"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="proses"
+                        android:layout_toRightOf="@+id/status"
+                        android:layout_below="@+id/imagep"
+                        android:layout_marginTop="15dp"
+                        android:textStyle="italic"
+                        />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:text="Detail Laporan"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:layout_marginTop="15dp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/bg_button"
+                        android:layout_below="@+id/imagep"
+                        android:layout_alignEnd="@+id/imagep"
+                        />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tanggapi"
+                        android:text="Tanggapi Laporan"
+                        android:layout_below="@id/status"
+                        android:textStyle="bold"
+                        android:layout_marginTop="10dp"
+                        />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/tanggapi"
+                        android:id="@+id/ed_pengaduan"
+                        android:layout_width="300dp"
+                        android:layout_height="120dp"
+                        android:layout_centerHorizontal="true"
+                        app:cardCornerRadius="25dp"
+                        >
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:inputType="text|textMultiLine"
+                            android:hint="Isi tanggapan disini"
+                            android:background="@color/white"
+                            android:padding="3dp"
+                            />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <Button
+                        android:layout_marginTop="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:background="@drawable/bg_button"
+                        android:layout_below="@+id/ed_pengaduan"
+                        android:layout_alignParentRight="true"
+                        android:text="Kirim Tanggapan"
+                        android:textColor="@color/white"
+                        />
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
